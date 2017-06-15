@@ -1,0 +1,165 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 2 - Prototype-progressSession
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Progress Session</title>
+    
+<link rel="stylesheet" type="text/css" href="../../css/jquery.mobile-1.4.5.min.css">
+<script src="../../jQuery/jquery-1.11.2.min.js"></script>
+<script src="../../jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="../JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../../css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+<!--==================================================================== Progress Session ====================================================================-->
+<div data-role="page" id="userSelection">
+    <div data-role="header" data-add-back-btn="true">
+          <h1>Progress Session</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content"> 
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 250px;">
+        <tr>
+            <p style="text-align:left; margin-left: 70px;"><img src="../../images/RookieLOGO-188x38.png" width="189" height="37" alt="RookieLogo"/></p>
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; line-height: 20px;">
+                           <div style="width: 30em;">
+                                <p style="margin: 50px 0 25px 0; text-align: center; font-size: 50px; font-weight:bold;">Session in Progress</p>
+                                <p style="margin: 50px 0 25px 0; text-align: center; font-size: 30px;"><span id="startSession" class="fa fa-flag-checkered" aria-hidden="true" style="margin-right:20px"></span>Session Start at: hh:mm</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="time" class="fa fa-clock-o" aria-hidden="true" style="margin-right:20px"></span>Session Time: hh:mm</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="group" class="fa fa-group" aria-hidden="true" style="margin-right:20px"></span>Apprentice User Name/<br />Supervisor User Name</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="car" class="fa fa-car" aria-hidden="true" style="margin-right:20px"></span>Car Name - Rego. Number</p>
+                                <br />
+                                <p style="margin: 20px 0 10px 0; text-align: center; font-size: 25px;">Session Features</p>
+                                <div style="margin-bottom:50px"></div>
+                                <label for="selRoadCon" style="font-size: 25px;"><span id="road" class="fa fa-road" aria-hidden="true" style="margin-right:10px;"></span>Road Condition</label>
+                                    <select name="selRoadCon" id="selRoadCon" multiple="multiple" data-native-menu="false">
+                                        <option value="Gravel">Gravel</option>
+                                        <option value="Rural Hwy">Rural Hwy</option>
+                                        <option value="Inner City">Inner City</option>
+                                        <option value="Rural Other">Rural Other</option>
+                                        <option value="Local St" selected="selected">Local St</option>
+                                        <option value="Main Rd">Main Rd</option>
+                                        <option value="Free Way">Free Way</option>
+                                    </select>
+                                <div style="margin-bottom:50px"></div>
+                                <label for="selTrafficCon" style="font-size: 25px;"><span id="traffic" class="fa fa-warning" aria-hidden="true" style="margin-right:10px;"></span>Traffic Condition</label>
+                                    <select name="selTrafficCon" id="selTrafficCon" multiple="multiple" data-native-menu="false">
+                                        <option value="Heavy">Heavy</option>
+                                        <option value="Moderate">Moderate</option>
+                                        <option value="Light" selected="selected">Light</option>
+                                    </select>
+                                <div style="margin-bottom:50px"></div>
+                                <label for="selParkingCon" style="font-size: 25px;"><span id="parking" class="fa fa-ticket" aria-hidden="true" style="margin-right:10px;"></span>Parking</label>
+                                    <select name="selParkingCon" id="selParkingCon" data-role="slider">
+                                        <option value="No" selected="selected">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                 <div style="margin-bottom:50px"></div>
+                                 <p style="margin: 20px 0 10px 0; text-align: center; font-size: 25px;">Any change on inital conditions?</p>
+                                <div style="margin-bottom:50px"></div>
+                                <label for="selLightCon" style="font-size: 25px;"><span id="light" class="fa fa-sun-o" aria-hidden="true" style="margin-right:10px;"></span>Light Condition</label>
+                                    <select name="selLightCon" id="selLightCon" multiple="multiple" data-native-menu="false">
+                                        <option value="Day" selected="selected">Day</option>
+                                        <option value="Dawn Dusk">Dawn Dusk</option>
+                                        <option value="Night">Night</option>
+                                    </select>
+                                <div style="margin-bottom:50px"></div>
+                                <label for="selWeatherCon" style="font-size: 25px;"><span id="weather" class="fa fa-umbrella" aria-hidden="true" style="margin-right:10px;"></span>Weather Condition</label>
+                                    <select name="selWeatherCon" id="selWeatherCon" multiple="multiple" data-native-menu="false">
+                                        <option value="Wet">Wet</option>
+                                        <option value="Dry" selected="selected">Dry</option>
+                                    </select>
+                                <div style="margin-bottom:100px"></div>
+                                
+                                <div data-role="fieldcontain" align="center" style="margin-top: 50px;">
+                                    <a href="#PopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 15em;">Stop Session</a> 
+                                </div>
+<!--====================================================================================== Stop Session pop up ======================================================================================-->
+                                <div data-role="popup" id="PopupDialog" style="width: 40em;">
+                                    <div data-role="header">
+                                        <h1>Stop Session</h1>
+                                    </div>
+                                    <div data-role="main" class="ui-content">
+                                        <div align="center"> 
+                                            <h2>Finished Session?</h2>
+                                            <p>Are you sure that you want to <strong>Stop and Finish</strong> this Session?</p>
+                                        </div>
+                                        <!--
+                                        only for prototype goal "Cancel Session" option will connect to an Apprentice session.
+                                        To iniciate an Supervisor session on this prototype will not be available yet.
+                                        -->
+                                        <a href="#" data-rel="back" data-direction="reverse" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 15em;">No, Continue Session</a>
+                                        <span style="margin-right: 30px;"></span>
+                                        <a href="sessionSummary.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 15em;">Yes, Stop Session</a>
+                                        
+                                    </div>
+
+                                    <div data-role="footer">
+                                        <h1>Footer Text</h1>
+                                    </div>
+                                </div>
+<!--====================================================================================== Stop Session pop up ======================================================================================-->
+
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div data-role="fieldcontain" align="center" style="margin-top: 50px;">
+                                <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-corner-all" style="width: 10em; text-decoration: none;">Cancel Session</a> 
+<!--====================================================================================== pop up ======================================================================================-->
+                                <div data-role="popup" id="myPopupDialog" style="width: 30em;">
+                                    <div data-role="header">
+                                        <h1>Cancel Session</h1>
+                                    </div>
+                                    <div data-role="main" class="ui-content">
+                                        <div align="center"> 
+                                            <h2>Cancel this Session?</h2>
+                                            <p>Are you sure that you want to <strong>Cancel</strong> this Session?</p>
+                                        </div>
+                                        <!--
+                                        only for prototype goal "Cancel Session" option will connect to an Apprentice session.
+                                        To iniciate an Supervisor session on this prototype will not be available yet.
+                                        -->
+                                        <a href="../welcomeApprentice.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 8em;">Cancel Session</a>
+                                        <span style="margin-right: 100px;"></span>
+                                        <a href="#" data-rel="back" data-direction="reverse" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 8em;">Continue</a>
+                                    </div>
+
+                                    <div data-role="footer">
+                                        <h1>Footer Text</h1>
+                                    </div>
+                                </div>
+<!--====================================================================================== pop up ======================================================================================-->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+    </div>
+
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+</div>
+
+</body>
+</html>

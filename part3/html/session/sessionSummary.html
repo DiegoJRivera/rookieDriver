@@ -1,0 +1,133 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 2 - Prototype-sessionSummary
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Session Summary</title>
+    
+<link rel="stylesheet" type="text/css" href="../../css/jquery.mobile-1.4.5.min.css">
+<script src="../../jQuery/jquery-1.11.2.min.js"></script>
+<script src="../../jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="../JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../../css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+<!--==================================================================== Session Summary ====================================================================-->
+<div data-role="page" id="userSelection">
+    <div data-role="header" data-add-back-btn="true">
+          <h1>Session Summary</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content"> 
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 250px;">
+        <tr>
+            <p style="text-align:left; margin-left: 70px;"><img src="../../images/RookieLOGO-188x38.png" width="189" height="37" alt="RookieLogo"/></p>
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; line-height: 20px;">
+                           <div style="width: 30em;">
+                                <p style="margin: 50px 0 25px 0; text-align: center; font-size: 50px; font-weight:bold;">Session Summary</p>
+                                <p style="margin: 50px 0 25px 0; text-align: center; font-size: 30px;"><span id="dateSession" class="fa fa-calendar" aria-hidden="true" style="margin-right:20px"></span>Session Date: DDD dd/mm/yyyy</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="startSession" class="fa fa-flag-checkered" aria-hidden="true" style="margin-right:20px"></span>Session Start at: hh:mm</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="finishSession" class="fa fa-flag" aria-hidden="true" style="margin-right:20px"></span>Session Finish at: hh:mm</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="time" class="fa fa-clock-o" aria-hidden="true" style="margin-right:20px"></span>Total Session Time: hh:mm:ss</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="group" class="fa fa-group" aria-hidden="true" style="margin-right:20px"></span>Apprentice User Name/<br />Supervisor User Name</p>
+                                <p style="margin: 25px 0 25px 0; text-align: center; font-size: 30px;"><span id="car" class="fa fa-car" aria-hidden="true" style="margin-right:20px"></span>Car Name - Rego. Number</p>
+                                <br />
+                                <p style="margin: 20px 0 10px 0; text-align: center; font-size: 25px;">Check the Session Features</p>
+                                <div style="margin-bottom:50px"></div>
+
+                                <fieldset data-role="controlgroup">
+                                <legend style="font-size: 25px;"><span id="road" class="fa fa-road" aria-hidden="true" style="margin-right:10px;"></span>Road Condition</legend>
+                                <input type="checkbox" name="chkRoad" id="chkGravel" class="custom" value="Gravel"/>
+                                <label for="chkGravel">Gravel</label>
+                                <input type="checkbox" name="chkRoad" id="chkRuralHwy" class="custom" value="Rural Hwy"/>
+                                <label for="chkRuralHwy">Rural Hwy</label>
+                                <input type="checkbox" name="chkRoad" id="chkInnerCity" class="custom" value="Inner City"/>
+                                <label for="chkInnerCity">Inner City</label>
+                                <input type="checkbox" name="chkRoad" id="chkRuralOther" class="custom" value="Rural Other"/>
+                                <label for="chkRuralOther">Rural Other</label>
+                                <input type="checkbox" name="chkRoad" id="chkLocalSt" class="custom" value="Local St"/>
+                                <label for="chkLocalSt">Local St</label>
+                                <input type="checkbox" name="chkRoad" id="chkMainRd" class="custom" value="Main Rd"/>
+                                <label for="chkMainRd">Main Rd</label>
+                                <input type="checkbox" name="chkRoad" id="chkFreeWay" class="custom" value="Free Way"/>
+                                <label for="chkFreeWay">Free Way</label>
+                                </fieldset>
+                                <div style="margin-bottom:50px"></div>
+                                <fieldset data-role="controlgroup">
+                                <legend style="font-size: 25px;"><span id="traffic" class="fa fa-warning" aria-hidden="true" style="margin-right:10px;"></span>Traffic Condition</legend>
+                                <input type="checkbox" name="chkTraffic" id="chkHeavy" class="custom" value="Heavy"/>
+                                <label for="chkHeavy">Heavy</label>
+                                <input type="checkbox" name="chkTraffic" id="chkModerate" class="custom" value="Moderate"/>
+                                <label for="chkModerate">Moderate</label>
+                                <input type="checkbox" name="chkTraffic" id="chkLight" class="custom" value="Light"/>
+                                <label for="chkLight">Light</label>
+                                </fieldset>
+                                <div style="margin-bottom:50px"></div>
+                                <fieldset data-role="controlgroup">
+                                <legend style="font-size: 25px;"><span id="parking" class="fa fa-ticket" aria-hidden="true" style="margin-right:10px;"></span>Parking Condition</legend>
+                                <input type="checkbox" name="chkParking" id="chkNo" class="custom" value="No"/>
+                                <label for="chkNo">No</label>
+                                <input type="checkbox" name="chkParking" id="chkYes" class="custom" value="Yes"/>
+                                <label for="chkYes">Yes</label>
+                                </fieldset>
+                                <div style="margin-bottom:50px"></div>
+                                <fieldset data-role="controlgroup">
+                                <legend style="font-size: 25px;"><span id="light" class="fa fa-sun-o" aria-hidden="true" style="margin-right:10px;"></span>Light Condition</legend>
+                                <input type="checkbox" name="chkLight" id="chkDay" class="custom" value="Day"/>
+                                <label for="chkDay">Day</label>
+                                <input type="checkbox" name="chkLight" id="chkDawnDusk" class="custom" value="Dawn Dusk"/>
+                                <label for="chkDawnDusk">Down Dusk</label>
+                                <input type="checkbox" name="chkLight" id="chkNight" class="custom" value="Night"/>
+                                <label for="chkNight">Night</label>
+                                </fieldset>
+                                <div style="margin-bottom:50px"></div>
+                                <fieldset data-role="controlgroup">
+                                <legend style="font-size: 25px;"><span id="weather" class="fa fa-umbrella" aria-hidden="true" style="margin-right:10px;"></span>Weather Condition</legend>
+                                <input type="checkbox" name="chkWeather" id="chkWet" class="custom" value="Wet"/>
+                                <label for="chkWet">Wet</label>
+                                <input type="checkbox" name="chkWeather" id="chkDry" class="custom" value="Dry"/>
+                                <label for="chkDry">Dry</label>
+                                </fieldset>
+                                <div style="margin-bottom:50px"></div>
+                                <label for="txtSupSearchApp" style="font-size: 25px;"><span id="odometer" class="fa fa-tachometer" aria-hidden="true" style="margin-right:10px"></span>Final Odometer</label>
+                                <input type="text" name="txtSupSearchApp" id="txtSupSearchApp" placeholder="Start Vehicle Odometer" style="font-size: 20px;"/> <!-- datatype must be number -->
+                                <div style="margin-bottom:50px"></div>
+                                <label for="txtComments" style="font-size: 25px;"><span id="comments" class="fa fa-commenting" aria-hidden="true" style="margin-right:10px"></span>Comments</label>
+                                <textarea cols="40" rows="6" name="txtComments" id="txtComments" placeholder="Please enter any comments about the Session"></textarea>
+
+                                <div style="margin-bottom:100px"></div>
+                                
+                                <div data-role="fieldcontain" align="center" style="margin-top: 50px;">
+                                    <a href="sessionValidation.html" rel="external" data-role="button" data-inline="true" style="width: 15em;">Approve the Sesssion</a>
+                                </div>
+                                <div style="margin-bottom:50px"></div>    
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+    </div>
+
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+</div>
+
+</body>
+</html>

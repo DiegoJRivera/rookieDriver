@@ -1,0 +1,135 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 3 - Prototype
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rookie Drivers</title>
+    
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+<script src="jQuery/jquery-1.11.2.min.js"></script>
+<script src="jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+
+<div data-role="page" id="registerPage" data-theme="a">
+    <div data-role="header">
+        <h1>Rookie Drivers App</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <!-- reconsiderar nuevamente que campos necesitan ser realmente datatype=number,
+    pensando en la version web con la "flecha" dpara subir y bajar los valores -->
+   
+    <div data-role="main" class="ui-content">
+
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 240px">
+        <tr> 
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; font-size: 16px; line-height: 20px;">
+                            <div style="width: 30em;">
+                                <p style="text-align:center"><img src="images/RookieLOGO-376x76.png" width="376" height="73" alt="RookieLogo"/></p>
+                                <div data-role="fieldcontain" align="center" style="margin-top: 50px;">
+                                    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 10em;">SIGN UP</a> 
+                                </div>
+                                <br />
+                                <p style="margin-top: 50px; text-align: center;">LOG IN</p>
+                                <label style="font-size: 25px;" for="txtLoginEmail"><span id="mail" class="fa fa-envelope-o" aria-hidden="true" style="margin-right:20px"></span>E-Mail</label>
+                                <input style="font-size: 20px;" type="text" name="txtLoginEmail" id="txtLoginEmail" placeholder="youremail@example.com" />
+                                <br />
+                                <label style="font-size: 25px;" for="txtLoginPassword"><span id="lock" class="fa fa-lock" aria-hidden="true" style="margin-right:20px"></span>Password</label>
+                                <input style="font-size: 20px;" type="password" name="txtLoginPassword" id="txtLoginPassword" placeholder="Please enter your password"/>
+                                <br />              
+                                <div data-role="fieldcontain" style="text-align:right">
+                                    <a href="#PopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-corner-all" style="width: 10em; text-decoration: none;">Forgot Password</a> 
+<!--====================================================================================== pop up ======================================================================================-->
+                                    <div data-role="popup" id="PopupDialog" style="width: 30em;">
+                                        <div data-role="header">
+                                            <h1>Recover your Password</h1>
+                                        </div>
+                                        <div data-role="main" class="ui-content">
+                                            <div align="center"> 
+                                                <h2>Forgot your Password?</h2>
+                                                <p>Give us your Email and we will send you a reconnection link:</p>
+                                            </div>
+                                            <!--
+                                            only for prototype goal "Cancel Session" option will connect to an Apprentice session.
+                                            To iniciate an Supervisor session on this prototype will not be available yet.
+                                            -->
+                                            <label style="font-size: 25px;" for="txtLoginEmail"><span id="mail" class="fa fa-envelope-o" aria-hidden="true" style="margin-right:20px"></span>E-Mail</label>
+                                            <input style="font-size: 20px;" type="text" name="txtLoginEmail" id="txtLoginEmail" placeholder="youremail@example.com" />       
+                                            <br />
+                                            <div style="text-align: center;">
+                                                <a href="#" data-rel="back" data-direction="reverse" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 8em;">Send Email</a>
+                                            </div>
+                                        </div>
+
+                                        <div data-role="footer">
+                                            <h1>Footer Text</h1>
+                                        </div>
+                                    </div>
+<!--====================================================================================== pop up ======================================================================================-->
+                            
+                                    <!--<a href="#" data-inline="true" style="text-decoration: none;">Forgot password?</a>-->
+                                    <br />
+                                    <input type="checkbox" name="rememberme" id="rememberme" value="yes" checked="checked" />
+                                    <label for="rememberme">Remember Me</label>
+                                </div>
+                                <br />
+                                <div data-role="fieldcontain" align="center">
+                                    <!--
+                                        only for prototype goal "Log in" option will connect to an Apprentice session.
+                                        To iniciate an Supervisor session on this prototype will be neccesary do it
+                                        through the "Sign Up" option
+                                    -->                                    
+                                    <a href="html/welcomeApprentice.html" rel="external" data-role="button" data-inline="true" style="width: 10em;">LOG IN</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+
+   <div data-role="footer">
+        <h4>Footer</h4>
+   </div>
+</div>
+
+<!--==================================================================== pop up ====================================================================-->
+    <div data-role="popup" id="myPopupDialog">
+        <div data-role="header">
+            <h1>GPS Conecction</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div align="center"> 
+                <h2>Welcome to Learn Driver App!</h2>
+                <p>This Aplication want to use your current location</p>
+            </div>
+            <a href="html/userSelection.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 10em;">Allow</a>
+            <span style="margin-right: 100px;"></span>
+            <a href="html/userSelection.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="width: 10em;">Don't Allow</a>
+        </div>
+
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+    </div>
+
+</body>
+</html>

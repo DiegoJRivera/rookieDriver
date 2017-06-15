@@ -1,0 +1,71 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 2 - Prototype-userSelection
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>User Selection</title>
+    
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+<script src="../jQuery/jquery-1.11.2.min.js"></script>
+<script src="../jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="../JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+<!--==================================================================== User Selection ====================================================================-->
+<div data-role="page" id="userSelection">
+    <div data-role="header" data-add-back-btn="true">
+          <h1>User Selection</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content"> 
+
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 240px">
+        <tr> 
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; font-size: 16px; line-height: 20px;">
+                            <div style="width: 30em;">
+                                <p style="text-align:center"><img src="../images/RookieLOGO-376x76.png" width="376" height="73" alt="RookieLogo"/></p>
+                                <p style="margin: 50px 0 10px 0; text-align: center; font-size: 30px;">I'm a:</p>
+                                <br />
+                                <div data-role="fieldcontain" align="center" style="margin-top: 30px;">
+                                    <a href="apprenticeProfile.html" rel="external" data-role="button" data-inline="true" style="width: 15em;">Apprentice</a> <!-- validar para que sea igual al boton back -->
+                                </div>
+                                <br />
+                                <div data-role="fieldcontain" align="center">                                    
+                                    <a href="supervisorProfile.html" rel="external" data-role="button" data-inline="true" style="width: 15em;">Supervisor</a> <!-- validar para que sea igual al boton back -->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-rel="back" data-direction="reverse" data-inline="true" style="text-decoration: none; text-align:right;">Back</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+
+    </div>
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+</div>
+
+</body>
+</html>

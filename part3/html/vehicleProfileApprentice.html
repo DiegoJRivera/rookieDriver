@@ -1,0 +1,92 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 2 - Prototype-vehicleProfile
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+    
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+<script src="../jQuery/jquery-1.11.2.min.js"></script>
+<script src="../jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="../JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+<!--==================================================================== Vehicle Profile ====================================================================-->
+<div data-role="page" id="vehicleProfile">
+    <div data-role="header" data-add-back-btn="true">
+          <h1>Vehicle</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content"> 
+         
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 200px">
+        <tr>
+            <p style="text-align:left; margin-left: 70px;"><img src="../images/RookieLOGO-188x38.png" width="189" height="37" alt="RookieLogo"/></p>
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; font-size: 16px; line-height: 20px;">
+                            <div style="width: 30em;">    
+                                <label for="numVinNo" style="font-size: 25px;"><span id="permitNum" class="fa fa-vcard-o" aria-hidden="true" style="margin-right:20px"></span>Vin. Number</label>
+                                <input style="font-size: 20px;" type="number" name="numVinNo" id="numVinNo" placeholder="0123456789" />
+                                <br />
+                                <label for="numRegoNo" style="font-size: 25px;"><span id="permitNum" class="fa fa-vcard-o" aria-hidden="true" style="margin-right:20px"></span>Rego. Number</label>
+                                <input style="font-size: 20px;" type="number" name="numRegoNo" id="numRegoNo" placeholder="0123456789" />
+                                <br />
+                                <label for="txtRegoExp" style="font-size: 25px;"><span id="dateSession" class="fa fa-calendar" aria-hidden="true" style="margin-right:20px"></span>Rego. Number Exp. Date</label>
+                                <input style="font-size: 20px;" type="text" name="txtRegoExp" id="txtRegoExp" placeholder="DD/MM/YYYY" /> <!-- validar el data type adecuado para la fecha o se ajusta en el script -->
+                                <br />
+                                <label for="txtMake" style="font-size: 25px;"><span id="car" class="fa fa-car" aria-hidden="true" style="margin-right:20px"></span>Make</label>
+                                <input style="font-size: 20px;" type="text" name="txtMake" id="txtMake" placeholder="Please enter the Vehicle Maker" />
+                                <br />
+                                <label for="txtModel" style="font-size: 25px;"><span id="car" class="fa fa-car" aria-hidden="true" style="margin-right:20px"></span>Model</label>
+                                <input style="font-size: 20px;" type="text" name="txtModel" id="txtModel" placeholder="Please enter the Vehicle Model" />
+                                <br />
+                                <label for="numYear" style="font-size: 25px;"><span id="dateSession" class="fa fa-calendar" aria-hidden="true" style="margin-right:20px"></span>Year</label>
+                                <input style="font-size: 20px;" type="number" name="numYear" id="numYear" placeholder="2017" />
+                                <br />
+                                <fieldset data-role="controlgroup" data-type="horizontal">
+                                <legend style="font-size: 25px;"><span id="wrench" class="fa fa-wrench" aria-hidden="true" style="margin-right:20px"></span>Transmission</legend>
+                                    <input type="radio" name="radTransmission" id="radManual" value="manual" checked="checked"/>
+                                    <label for="radManual">Manual</label>
+                                    <input type="radio" name="radTransmission" id="radAuto" value="automatic" />
+                                    <label for="radAuto">Automatic</label>
+                                </fieldset>
+                                <br />
+                                <label for="txtColor" style="font-size: 25px;"><span id="colorIcon" class="fa fa-paint-brush" aria-hidden="true" style="margin-right:20px"></span>Color</label>
+                                <input style="font-size: 20px;" type="text" name="txtColor" id="txtColor" placeholder="Please enter the Vehicle Color" />
+                                <br />
+                                <label for="txtNick" style="font-size: 25px;"><span id="nick" class="fa fa-hand-peace-o" aria-hidden="true" style="margin-right:20px"></span>Nickname :</label>
+                                <input style="font-size: 20px;" type="text" name="txtNick" id="txtNick" placeholder="Any Vehicle Nickname?"/>
+                                <br />
+                                <a href="#" data-role="button" data-inline="true" data-rel="back" data-direction="reverse" style="width: 8em;">Back</a>
+                                <span style="margin-right: 130px;"></span>
+                                <a href="readyApprentice.html" rel="external" data-role="button" data-inline="true" style="width: 8em;">Add Vehicle</a> <!-- validar para que sea igual al boton back -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+
+    </div>
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+</div>
+
+</body>
+</html>

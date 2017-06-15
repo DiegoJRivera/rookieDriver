@@ -1,0 +1,87 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 2 - Prototype-apprenticeProfile
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Apprentice Profile</title>
+    
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+<script src="../jQuery/jquery-1.11.2.min.js"></script>
+<script src="../jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="../JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+<!--==================================================================== Apprentice Profile ====================================================================-->
+<div data-role="page" id="apprenticeProfile">
+    <div data-role="header" data-add-back-btn="true">
+        <h1>Apprentice Profile</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content">	
+         
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 230px">
+        <tr>
+            <p style="text-align:left; margin-left: 70px;"><img src="../images/RookieLOGO-188x38.png" width="189" height="37" alt="RookieLogo"/></p>
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; font-size: 16px; line-height: 20px;">
+                            <div style="width: 30em;">
+                                <label for="txtFistName" style="font-size: 25px;"><span id="user" class="fa fa-user" aria-hidden="true" style="margin-right:20px"></span>Fisrt Name</label>
+                                <input style="font-size: 20px;" type="text" name="txtFistName" id="txtFistName" placeholder="Please enter your First Name" />
+                                <br />
+                                <label for="txtLastName" style="font-size: 25px;"><span id="user" class="fa fa-user" aria-hidden="true" style="margin-right:20px"></span>Last Name</label>
+                                <input style="font-size: 20px;" type="text" name="txtLastName" id="txtLastName" placeholder="Please enter your Last Name" />
+                                <br />
+                                <label for="txtDOB" style="font-size: 25px;"><span id="dateSession" class="fa fa-calendar" aria-hidden="true" style="margin-right:20px"></span>Date Of Birth</label>
+                                <input style="font-size: 20px;" type="text" name="txtDOB" id="txtDOB" placeholder="DD/MM/YYYY" /> <!-- validar el data type adecuado para la fecha o se ajusta en el script -->
+                                <br />
+                                <label for="numPermitNo" style="font-size: 25px;"><span id="permitNum" class="fa fa-vcard-o" aria-hidden="true" style="margin-right:20px"></span>Permit Number</label>
+                                <input style="font-size: 20px;" type="number" name="numPermitNo" id="numPermitNo" placeholder="0123456789" />
+                                <br />
+                                <label for="txtDOP" style="font-size: 25px;"><span id="dateSession" class="fa fa-calendar" aria-hidden="true" style="margin-right:20px"></span>Date Of Permit</label>
+                                <input style="font-size: 20px;" type="text" name="txtDOP" id="txtDOP" placeholder="DD/MM/YYYY" /> <!-- validar el data type adecuado para la fecha o se ajusta en el script -->
+                                <br />
+                                <label for="txtEmail" style="font-size: 25px;"><span id="mail" class="fa fa-envelope-o" aria-hidden="true" style="margin-right:20px"></span>E-Mail</label>
+                                <input style="font-size: 20px;" type="text" name="txtEmail" id="txtEmail" placeholder="youremail@example.com" />
+                                <br />
+                                <label for="txtConEmail" style="font-size: 25px;"><span id="mail" class="fa fa-envelope-o" aria-hidden="true" style="margin-right:20px"></span>Confirm E-Mail</label>
+                                <input style="font-size: 20px;" type="text" name="txtConEmail" id="txtConEmail" placeholder="youremail@example.com"/>
+                                <br />
+                                <label for="txtPassword" style="font-size: 25px;"><span id="lock" class="fa fa-lock" aria-hidden="true" style="margin-right:20px"></span>Password</label>
+                                <input style="font-size: 20px;" type="password" name="txtPassword" id="txtPassword" placeholder="Please enter your password"/>
+                                <br />
+                                <label for="txtConPassword" style="font-size: 25px;"><span id="lock" class="fa fa-lock" aria-hidden="true" style="margin-right:20px"></span>Confirm Password</label>
+                                <input style="font-size: 20px;" type="password" name="txtConPassword" id="txtConPassword" placeholder="Please confirm your password"/>
+                                <br />                                      
+                                <a href="#" data-role="button" data-inline="true" data-rel="back" data-direction="reverse" style="width: 8em;">Back</a>
+                                <span style="margin-right: 130px;"></span>
+                                <a href="completeProfileApprentice.html" rel="external" data-role="button" data-inline="true" style="width: 8em;">Next</a> <!-- validar para que sea igual al boton back -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+
+    </div>
+    <div data-role="footer"> 
+        <h4>Footer</h4>    
+    </div>
+</div>
+
+</body>
+</html>

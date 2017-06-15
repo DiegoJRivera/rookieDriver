@@ -1,0 +1,82 @@
+<!--
+    ICT22A Mobile Applications Assignment Part 2 - Prototype-readySupervisor
+    Author: Diego Rivera
+    Semester 1/2017
+-->
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ready to Start Session</title>
+    
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css">
+<script src="../jQuery/jquery-1.11.2.min.js"></script>
+<script src="../jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="../JScript/script.js"></script>
+
+<!-- some styles references -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../css/prototypeStyle.css" type="text/css">
+
+</head>
+ 
+<body> 
+<!--==================================================================== Start Session ====================================================================-->
+<div data-role="page" id="userSelection">
+    <div data-role="header" data-add-back-btn="true">
+          <h1>Ready to Start</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content"> 
+
+    <table border="0" cellpadding="0" cellspacing="0" width="1000" style="border-collapse: collapse; margin-left: 250px;">
+        <tr>
+            <p style="text-align:left; margin-left: 70px;"><img src="../images/RookieLOGO-188x38.png" width="189" height="37" alt="RookieLogo"/></p> 
+            <td width="260" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: 25px 0 0 0;" style="color: #153643; line-height: 20px;">
+                           <div style="width: 30em;">
+                                <p style="margin: 50px 0 50px 0; text-align: center; font-size: 40px; font-weight:bold;">Ready to Start your Sesseion?</p>
+                                <p style="margin: 50px 0 50px 0; text-align: center; font-size: 30px;"><span id="user" class="fa fa-user" aria-hidden="true" style="margin-right:20px"></span>Supervisor User Name</p>
+                                <br />
+                                <label for="txtSupSearchApp"><span id="search" class="fa fa-search" aria-hidden="true" style="margin-right:10px"></span>Apprentice</label>
+                                <input type="text" name="txtSupSearchApp" id="txtSupSearchApp" placeholder="Search your Apprentice" />
+                                <div style="margin-bottom: 50px;"></div>
+                                <label for="txtVehicleSearchApp"><span id="search" class="fa fa-search" aria-hidden="true" style="margin-right:10px"></span>Vehicle</label>
+                                <input type="text" name="txtVehicleSearchApp" id="txtVehicleSearchApp" placeholder="Search your Vehicle" />
+                                <br />
+
+                                <div style="width: 28em; margin:20px 0 0 390px;">
+                                    <a href="vehicleProfileSupervisor.html" rel="external" data-inline="true" style="text-decoration: none;">Add Vehicle</a>
+                                </div>
+                                
+                                <p style="margin: 50px 0 20px 0; text-align: center; font-size: 40px;">Let's go Practice!</p>
+                                
+                                <div data-role="fieldcontain" align="center">                                    
+                                    <a href="requestMessageSupervisor.html" rel="external" data-role="button" data-inline="true" style="width: 15em;">Ask your Apprentice</a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="welcomeSupervisor.html" rel="external" data-inline="true" style="text-decoration: none; text-align:right;">Back</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>	 
+    </table>
+   
+    </div>
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+</div>
+
+</body>
+</html>
